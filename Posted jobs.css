@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+
+body {
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f2f2f2;
+    direction: rtl;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* menu list */
+#menu {
+    background: #111827;
+    font-family: 'Cairo', sans-serif;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+#menu .logo {
+    padding: 12px 20px 0 0;
+
+}
+
+#menu .logo img {
+    width: 45%;
+
+}
+
+#menu .items {
+    margin-top: 40px;
+}
+
+#menu .items li {
+    list-style: none;
+    padding: 15px 0;
+    transition: 0.3s ease;
+}
+
+#menu .items li:hover {
+    background: #253047;
+    cursor: pointer;
+
+}
+
+#menu .items li:nth-child(2) {
+    border-right: 4px solid #fff;
+}
+
+
+#menu .items li i {
+    color: rgba(134, 141, 151);
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 10px 0 25px;
+}
+
+
+#menu .items li:hover i,
+#menu .items li:hover a {
+    color: #f3f4f6;
+}
+
+#menu .items li a {
+    text-decoration: none;
+    color: rgba(134, 141, 151);
+    font-weight: 300px;
+    transition: 0.3s ease;
+}
+
+
+/* profile */
+.sub-menu-wrap {
+    position: fixed;
+    top: 13%;
+    left: 1%;
+    width: 300px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 2;
+
+}
+
+.sub-menu-wrap.open-menu {
+    max-height: 400px;
+}
+
+.sub-menu {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+
+}
+
+.user-info h2 {
+    font-weight: 500;
+    color: #000;
+}
+
+.user-info img {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;
+}
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 12px 0;
+}
+
+.sub-menu-link p {
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.sub-menu-link .fa-right-from-bracket {
+
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 15px;
+
+}
+
+.sub-menu-link span {
+    transition: transform 0.5s ease;
+}
+
+.sub-menu-link:hover span {
+    transform: translateX(-10px);
+}
+
+.sub-menu-link:hover p {
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+
+
+/* navigation */
+#interface {
+    width: calc(100% - 300px);
+    margin-right: 300px;
+}
+
+
+#interface .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 5px 5px -4px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: calc(100% - 300px);
+    z-index: 2;
+   
+}
+
+.n1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+#menu-btn {
+    display: none;
+    color: #2b2b2b;
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* تصميم الكروت */
+.card-container {
+    max-width: 800px;
+    margin: 20px auto;
+    
+}
+
+
+.job-card {
+    width: 100%;
+    margin: 80px 100px 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.job-card:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.job-card h3 {
+    margin: 0;
+}
+
+.job-card p {
+    margin: 0 0 10px 10px;
+
+}
+
+.job-card img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.job-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.job-location,
+.years-of-experience,
+.gender-required,
+.job-type,
+.salary {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.job-location .label,
+.years-of-experience .label,
+.gender-required .label,
+.job-type .label,
+.salary .label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.job-location .value,
+.years-of-experience .value,
+.gender-required .value,
+.job-type .value,
+.salary .value {
+    font-weight: normal;
+}
+
+.job-features {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.job-features .label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.label{
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+.job-features ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.job-features li {
+    margin: 0 0 10px 10px;
+
+}
+
+
+    /********************زر Read More***********************/
+.read-more-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.read-more-button:hover {
+    transform: scale(1.1);
+}
+
+
+p:not(.show-more) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+p.show-more {
+    overflow: visible;
+    text-overflow: inherit;
+    -webkit-line-clamp: initial;
+}
+    
+
+
+/********************زر تعديل و الحذف*******************/
+.job-card .edit-btn{
+
+    background-color: green;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+    margin-right: 5%;
+   
+}
+
+.job-card .delete-btn{
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Cairo', sans-serif;
+    
+}
+
+
+/* responisve media quary */
+
+@media (max-width:769px) {
+   
+    #menu {
+        width: 240px;
+        position: fixed;
+        right: -240px;
+        transition: 0.3s ease;
+    }
+
+    #menu.active {
+        right: 0px;
+    }
+
+    #menu-btn {
+        display: initial;
+    }
+
+    #interface {
+        width: 100%;
+        margin-right: 0px;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+
+    #menu.active~#interface {
+        width: calc(100% - 270px);
+        margin-right: 270px;
+        transition: 0.3s ease;
+    }
+
+    #interface .navigation {
+        position: fixed;
+        width: 100%;
+    }
+
+    
+}

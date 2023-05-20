@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>تعليقات المستخدمين</title>
+    <link rel="stylesheet" href="comment.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="menu">
+        <div class="logo">
+            <img src="img/ash-1.svg" alt="">
+        </div>
+        <div class="items">
+            <li><i class="fa-solid fa-users"></i><a onclick="location.href='Admin.html'">المستخدمين</a></li>
+            <li><i class="fa-solid fa-upload"></i><a onclick="location.href='Posted jobs.html'">الوظائف المنشورة</a>
+            </li>
+            <li><i class="fa-solid fa-comment-dots"></i><a onclick="location.href='comment.html'">التعليقات</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">تسجيل الخروج</a></li>
+        </div>
+    </div>
+
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fas fa-bars"></i>
+                </div>
+            </div>
+            <!-- <i class="fa-solid fa-user" onclick="toggleMenu()"></i> -->
+            <lord-icon onclick="toggleMenu()" src="https://cdn.lordicon.com/hbvyhtse.json" trigger="click"
+                colors="primary:#111827" style="width:40px; height:40px; cursor: pointer;">
+            </lord-icon>
+        </div>
+
+        <!-- profile -->
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="img/user.png">
+                    <h2>الادمن</h2>
+                </div>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>تسجيل الخروج</p>
+                    <span><i class="fa-solid fa-angle-left"></i></span>
+                </a>
+            </div>
+        </div>
+        <!-- profile -->
+    </section>
+
+
+    <section id="Ms">
+        <div class="message">
+            <h2>عنوان الرسالة</h2>
+            <p>محتوى الرسالة</p>
+            <button class="reply-btn">الرد</button>
+        </div>
+
+        <div class="message">
+            <h2>عنوان الرسالة</h2>
+            <p>محتوى الرسالة</p>
+            <button class="reply-btn">الرد</button>
+        </div>
+        
+
+        <!-- عنصر الإجابة -->
+        <div id="reply-message" style="display: none;">
+
+            <p id="reply-message-content"></p>
+        </div>
+
+        <!-- نموذج الرد -->
+        <form id="reply-form">
+
+            <textarea id="message-content" placeholder="محتوى الرد"></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+
+    </section>
+
+
+
+
+    <script>
+
+
+        // profile
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+
+        
+
+        // menu responsive 
+        var menuR = document.getElementById("menu-btn").addEventListener('click', function () {
+            $('#menu').toggleClass("active");
+        });
+
+
+        // الرد على الرسائل
+        const replyButtons = document.querySelectorAll('.reply-btn');
+        const replyForm = document.getElementById('reply-form');
+        const replyMessage = document.getElementById('reply-message');
+        const replyMessageContent = document.getElementById('reply-message-content');
+
+        replyButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+
+
+                // تعيين محتوى الرسالة في صندوق الرد
+                const messageContent = button.previousElementSibling.nextElementSibling.textContent;
+                replyForm.querySelector('#message-content').value = messageContent;
+
+                // تمرير الصفحة إلى صندوق الرد
+                replyForm.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        replyForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            // إنشاء عنصر الرد
+            const reply = document.createElement('div');
+            const replyContent = document.createElement('p');
+
+            // تعيين محتوى الرد
+
+            replyContent.textContent = replyForm.querySelector('#message-content').value;
+
+            // إضافة العناصر إلى عنصر الرد
+
+            reply.appendChild(replyContent);
+
+            // عرض عنصر الرد
+
+            replyMessageContent.textContent = replyContent.textContent;
+            replyMessage.style.display = 'block';
+
+            // إفراغ صندوق الرد
+            replyForm.reset();
+        });
+
+    </script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+
+</body>
+
+</html>

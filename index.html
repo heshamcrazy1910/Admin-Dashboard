@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="Admin.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <img src="img/ash-1.svg" alt="">
+        </div>
+        <div class="items">
+            <li><i class="fa-solid fa-users"></i><a href="#">المستخدمين</a></li>
+            <li><i class="fa-solid fa-upload"></i><a onclick="location.href='Posted jobs.html'">الوظائف المنشورة</a></li>
+            <li><i class="fa-solid fa-comment-dots"></i><a onclick="location.href='comment.html'">التعليقات</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">تسجيل الخروج</a></li>
+        </div>
+    </section>
+
+
+    <section id="interface">
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fas fa-bars"></i>
+                </div>
+            </div>
+            <!-- <i class="fa-solid fa-user" onclick="toggleMenu()"></i> -->
+            <lord-icon
+                onclick="toggleMenu()"
+                src="https://cdn.lordicon.com/hbvyhtse.json"
+                trigger="click"
+                colors="primary:#111827"
+                style="width:40px; height:40px; cursor: pointer;">
+            </lord-icon>
+        </div>
+
+        <!-- profile -->
+        <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="img/user.png">
+                    <h2>الادمن</h2>
+                </div>
+                <hr>
+                <a href="#" class="sub-menu-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <p>تسجيل الخروج</p>
+                    <span><i class="fa-solid fa-angle-left"></i></span>
+                </a>
+            </div>
+        </div>
+        <!-- profile -->
+
+
+        <div class="title-container">
+            <h1>لوحه تحكم لصفحه اشتغل</h1>
+        </div>
+        <div class="table-container">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th>اسم المستخدم</th>
+                        <th>البريد الإلكتروني</th>
+                        <th>تاريخ التسجيل</th>
+                        <th>رقم الهاتف</th>
+                        <th>كراغب للعمل/كشركة</th>
+                        <th>صورة السيرة الذاتية</th>
+                        <th>العنوان</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>محمود طارق </td>
+                        <td>heshamcrazy0@gmail.com</td>
+                        <td>2023-05-03</td>
+                        <td>555-1234</td>
+                        <td>كراغب للعمل</td>
+                        <td>
+                            <div class="image-container">
+                                <img src="img/background4.jpeg.jpg" alt="Image 2">
+                                <div class="overlay"></div>
+                            </div>
+                        </td>
+                        <td>القاهرة، مصر</td>
+
+                        <td>
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>هشام حسن</td>
+                        <td>heshamcrazy0@gmail.com</td>
+                        <td>2023-05-01</td>
+                        <td>01000000000</td>
+                        <td>كشركة</td>
+                        <td>
+                            <div class="image-container">
+                                <img src="img/background5.jpeg.jpg" alt="Image 2">
+                                <div class="overlay"></div>
+                            </div>
+                        </td>
+                        <td>القاهرة، مصر</td>
+                        <td>
+
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>كريم عبد الله</td>
+                        <td>heshamcrazy0@gmail.com</td>
+                        <td>2023-04-29</td>
+                        <td>01111111111</td>
+                        <td>كشركة</td>
+                        <td>
+                            <div class="image-container">
+                                <img src="img/background6.jpeg.jpg" alt="Image 2">
+                                <div class="overlay"></div>
+                            </div>
+                        </td>
+                        <td>الإسكندرية، مصر</td>
+                        <td>
+
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>سيد ابراهيم</td>
+                        <td>heshamcrazy0@gmail.com</td>
+                        <td>2023-04-29</td>
+                        <td>01111111111</td>
+                        <td>كراغب للعمل</td>
+                        <td>
+                            <div class="image-container">
+                                <img src="img/background7.jpeg.jpg" alt="Image 2">
+                                <div class="overlay"></div>
+                            </div>
+                        </td>
+                        <td>الإسكندرية، مصر</td>
+                        <td>
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>محمود سمير</td>
+                        <td>heshamcrazy0@gmail.com</td>
+                        <td>2023-05-03</td>
+                        <td>555-1234</td>
+                        <td>كراغب للعمل</td>
+                        <td>
+                            <div class="image-container">
+                                <img src="img/background8.jpeg.jpg" alt="Image 2">
+                                <div class="overlay"></div>
+                            </div>
+                        </td>
+                        <td>القاهرة، مصر</td>
+
+                        <td>
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+
+
+
+    <script>
+
+        // profile
+        let subMenu = document.getElementById("subMenu");
+
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu");
+        }
+
+
+
+
+        // delete button
+        const table = document.querySelector("table");
+
+
+        table.addEventListener("click", (e) => {
+            if (e.target.tagName === "I") {
+                const row = e.target.closest("tr");
+
+
+                if (confirm("Are you sure you want to delete this row?")) {
+
+                    row.remove();
+                }
+
+            }
+        });
+
+
+        // menu responsive 
+        var menuR = document.getElementById("menu-btn").addEventListener('click', function () {
+            $('#menu').toggleClass("active");
+        });
+
+
+
+        // img
+        const imageContainers = document.querySelectorAll('.image-container');
+
+        imageContainers.forEach((container) => {
+            const overlay = container.querySelector('.overlay');
+
+            overlay.addEventListener('click', () => {
+                const imageUrl = container.querySelector('img').getAttribute('src');
+                window.open(imageUrl, '_blank');
+            });
+        });
+
+    </script>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+</body>
+
+</html>

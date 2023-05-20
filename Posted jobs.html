@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <title>الوظائف المنشورة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="Posted jobs.css">
+    
+</head>
+
+<body>
+
+    <section id="menu">
+        <div class="logo">
+            <img src="img/ash-1.svg" alt="">
+        </div>
+        <div class="items">
+            <li><i class="fa-solid fa-users"></i><a onclick="location.href='Admin.html'">المستخدمين</a></li>
+            <li><i class="fa-solid fa-upload"></i><a onclick="location.href='Posted jobs.html'">الوظائف المنشورة</a>
+            </li>
+            <li><i class="fa-solid fa-comment-dots"></i><a onclick="location.href='comment.html'">التعليقات</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#">تسجيل الخروج</a></li>
+        </div>
+    </section>
+
+
+
+    <div id="job-list" class="card-container">
+        <!-- كروت الوظائف سوف تظهر هنا -->
+        <div class="job-card">
+            <img src="img/gg1.png" alt="صورة الوظيفة">
+            <h3 class="job-title">مطور ويب</h3>
+            <p>شركة ABC</p>
+            <div class="job-info">
+                <div class="job-location">
+                    <span class="label">الموقع :</span>
+                    <span class="value">القاهرة، مصر</span>
+                </div>
+                <div class="years-of-experience">
+                    <span class="label">سنوات الخبرة :</span>
+                    <span class="value">3-5 سنوات</span>
+                </div>
+                <div class="gender-required">
+                    <span class="label">الجنس :</span>
+                    <span class="value">ذكور فقط</span>
+                </div>
+                <div class="job-type">
+                    <span class="label">نوع الوظيفة :</span>
+                    <span class="value">دوام كامل</span>
+                </div>
+                <div class="salary">
+                    <span class="label">الراتب :</span>
+                    <span class="value">15000 - 20000 جنيهًا مصريًا شهريًا</span>
+                </div>
+                <div class="job-features">
+                    <span class="label">المميزات :</span>
+                    <ul>
+                        <li>تأمين صحي ,</li>
+                        <li>تأمين اجتماعي ,</li>
+                        <li>بدلات</li>
+                    </ul>
+                </div>
+                <!---------زر Read More---------->
+                <span class="label">تفاصيل الوظيفة :</span>
+                <p>
+                    (( المقابله الشخصيه يوم الجمعه ))
+                    ((بدون خبرة )) (( دجله المعادي ))
+                    محتاجه 10 مساعدين شيفات بدون خبره
+                    شرط ان يكون طالب او خريج (( قسم مطبخ فقط ))
+                    السن من 18 سنه ل 30 سنه
+                    الشغل 9 ساعات منهم ساعة راحه
+                    المرتب 3000جنيه ثابت + حوافز + بدل وجبه يوميا
+                    متوفر سكن للمغتربيين
+                    تدريب علي العمل مدفوع الاجر
+
+                </p>
+                <button class="read-more-button" onclick="showMoreText(this)">Read More</button>
+                <!---------زر Read More---------->
+                <button class="edit-btn">تعديل</button>
+                <button class="delete-btn">حذف</button>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <img src="img/gg2.png" alt="صورة الوظيفة">
+            <h3>مطور ويب</h3>
+            <p>شركة ABC</p>
+            <div class="job-info">
+                <div class="job-location">
+                    <span class="label">الموقع :</span>
+                    <span class="value">القاهرة، مصر</span>
+                </div>
+                <div class="years-of-experience">
+                    <span class="label">سنوات الخبرة :</span>
+                    <span class="value">3-5 سنوات</span>
+                </div>
+                <div class="gender-required">
+                    <span class="label">الجنس :</span>
+                    <span class="value">ذكور فقط</span>
+                </div>
+                <div class="job-type">
+                    <span class="label">نوع الوظيفة :</span>
+                    <span class="value">دوام كامل</span>
+                </div>
+                <div class="salary">
+                    <span class="label">الراتب :</span>
+                    <span class="value">15000 - 20000 جنيهًا مصريًا شهريًا</span>
+                </div>
+                <div class="job-features">
+                    <span class="label">المميزات :</span>
+                    <ul>
+                        <li>تأمين صحي ,</li>
+                        <li>تأمين اجتماعي ,</li>
+                        <li>بدلات</li>
+                    </ul>
+                </div>
+                <span class="label">تفاصيل الوظيفة :</span>
+                <p>
+                    (( المقابله الشخصيه يوم الجمعه ))
+                    ((بدون خبرة )) (( دجله المعادي ))
+                    محتاجه 10 مساعدين شيفات بدون خبره
+                    شرط ان يكون طالب او خريج (( قسم مطبخ فقط ))
+                    السن من 18 سنه ل 30 سنه
+                    الشغل 9 ساعات منهم ساعة راحه
+                    المرتب 3000جنيه ثابت + حوافز + بدل وجبه يوميا
+                    متوفر سكن للمغتربيين
+                    تدريب علي العمل مدفوع الاجر
+
+                </p>
+                <button class="read-more-button" onclick="showMoreText(this)">Read More</button>
+                <button class="edit-btn">تعديل</button>
+                <button class="delete-btn">حذف</button>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <img src="img/gg3.png" alt="صورة الوظيفة">
+            <h3>مطور ويب</h3>
+            <p>شركة ABC</p>
+            <div class="job-info">
+                <div class="job-location">
+                    <span class="label">الموقع :</span>
+                    <span class="value">القاهرة، مصر</span>
+                </div>
+                <div class="years-of-experience">
+                    <span class="label">سنوات الخبرة :</span>
+                    <span class="value">3-5 سنوات</span>
+                </div>
+                <div class="gender-required">
+                    <span class="label">الجنس :</span>
+                    <span class="value">ذكور فقط</span>
+                </div>
+                <div class="job-type">
+                    <span class="label">نوع الوظيفة :</span>
+                    <span class="value">دوام كامل</span>
+                </div>
+                <div class="salary">
+                    <span class="label">الراتب:</span>
+                    <span class="value">15000 - 20000 جنيهًا مصريًا شهريًا</span>
+                </div>
+                <div class="job-features">
+                    <span class="label">المميزات :</span>
+                    <ul>
+                        <li>تأمين صحي ,</li>
+                        <li>تأمين اجتماعي ,</li>
+                        <li>بدلات</li>
+                    </ul>
+                </div>
+                <span class="label">تفاصيل الوظيفة :</span>
+                <p>
+                    (( المقابله الشخصيه يوم الجمعه ))
+                    ((بدون خبرة )) (( دجله المعادي ))
+                    محتاجه 10 مساعدين شيفات بدون خبره
+                    شرط ان يكون طالب او خريج (( قسم مطبخ فقط ))
+                    السن من 18 سنه ل 30 سنه
+                    الشغل 9 ساعات منهم ساعة راحه
+                    المرتب 3000جنيه ثابت + حوافز + بدل وجبه يوميا
+                    متوفر سكن للمغتربيين
+                    تدريب علي العمل مدفوع الاجر
+
+                </p>
+                <button class="read-more-button" onclick="showMoreText(this)">Read More</button>
+                <button class="edit-btn">تعديل</button>
+                <button class="delete-btn">حذف</button>
+            </div>
+        </div>
+
+        <div class="job-card">
+            <img src="img/gg4.png" alt="صورة الوظيفة">
+            <h3>مطور ويب</h3>
+            <p>شركة ABC</p>
+            <div class="job-info">
+                <div class="job-location">
+                    <span class="label">الموقع :</span>
+                    <span class="value">القاهرة، مصر</span>
+                </div>
+                <div class="years-of-experience">
+                    <span class="label">سنوات الخبرة:</span>
+                    <span class="value">3-5 سنوات</span>
+                </div>
+                <div class="gender-required">
+                    <span class="label">الجنس :</span>
+                    <span class="value">ذكور فقط</span>
+                </div>
+                <div class="job-type">
+                    <span class="label">نوع الوظيفة :</span>
+                    <span class="value">دوام كامل</span>
+                </div>
+                <div class="salary">
+                    <span class="label">الراتب :</span>
+                    <span class="value">15000 - 20000 جنيهًا مصريًا شهريًا</span>
+                </div>
+                <div class="job-features">
+                    <span class="label">المميزات :</span>
+                    <ul>
+                        <li>تأمين صحي ,</li>
+                        <li>تأمين اجتماعي ,</li>
+                        <li>بدلات</li>
+                    </ul>
+                </div>
+                <!---------زر Read More---------->
+                <span class="label">تفاصيل الوظيفة :</span>
+                <p>
+                    (( المقابله الشخصيه يوم الجمعه ))
+                    ((بدون خبرة )) (( دجله المعادي ))
+                    محتاجه 10 مساعدين شيفات بدون خبره
+                    شرط ان يكون طالب او خريج (( قسم مطبخ فقط ))
+                    السن من 18 سنه ل 30 سنه
+                    الشغل 9 ساعات منهم ساعة راحه
+                    المرتب 3000جنيه ثابت + حوافز + بدل وجبه يوميا
+                    متوفر سكن للمغتربيين
+                    تدريب علي العمل مدفوع الاجر
+
+                </p>
+                <button class="read-more-button" onclick="showMoreText(this)">Read More</button>
+                <!---------زر Read More---------->
+                <button class="edit-btn">تعديل</button>
+                <button class="delete-btn">حذف</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+    
+
+
+        /********************زر Read More***********************/
+        function showMoreText(button) {
+            var paragraph = button.previousElementSibling;
+            paragraph.classList.toggle("show-more");
+            if (button.innerText === "Read More") {
+                button.innerText = "Read Less";
+            } else {
+                button.innerText = "Read More";
+            }
+        }
+        /********************زر Read More***********************/
+
+
+
+        // زر تعديل و الحذف الوظيفة
+
+        // زر التعديل
+        const jobTitleElement = document.querySelector('.job-title');
+
+        // استهداف زر التعديل
+        const editBtn = document.querySelector('.edit-btn');
+        editBtn.addEventListener('click', () => {
+            // الحصول على قيمة النص الحالي
+            const currentText = jobTitleElement.innerHTML;
+
+            // الحصول على النص الجديد من المستخدم
+            const newText = prompt('الرجاء إدخال النص الجديد:', currentText);
+
+            // تعديل قيمة النص إذا تم إدخال نص جديد
+            if (newText !== null) {
+                jobTitleElement.innerHTML = newText;
+            }
+        });
+
+        // زر الحذف
+        const deleteBtns = document.querySelectorAll('.delete-btn');
+        deleteBtns.forEach((deleteBtn) => {
+            deleteBtn.addEventListener('click', () => {
+
+                // إظهار رسالة تأكيد الحذف
+                const result = confirm("هل أنت متأكد من رغبتك في حذف هذه الوظيفة؟");
+
+
+                if (result) {
+                    const jobCard = deleteBtn.parentNode.parentNode;
+                    jobCard.remove();
+                }
+            });
+        });
+    </script>
+    
+
+</body>
+
+</html>
